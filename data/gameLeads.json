@@ -4,13 +4,13 @@
       "name": "John Smith",
       "discordId": "@johnsmith#1234",
       "role": "Lead Game Administrator",
-      "avatar": ""
+      "avatar": "/images/staff/game-leads/default-avatar-gray-male.webp"
     },
     {
       "name": "Sarah Johnson",
       "discordId": "@sarahj#5678",
       "role": "Assistant Administrator",
-      "avatar": ""
+      "avatar": "/images/staff/game-leads/default-avatar-gray-male.webp"
     }
   ],
   "fortnite": [
@@ -18,7 +18,7 @@
       "name": "Mike Chen",
       "discordId": "@mikechen#9012",
       "role": "Lead Game Administrator",
-      "avatar": "/images/team/mike-avatar.png"
+      "avatar": "/images/staff/game-leads/default-avatar-gray-male.webp"
     }
   ],
   "ea-fc": [
@@ -26,7 +26,7 @@
       "name": "Alex Rodriguez",
       "discordId": "@gitago",
       "role": "Lead Game Administrator",
-      "avatar": "/images/team/alex-avatar.png"
+      "avatar": "/images/staff/game-leads/default-avatar-gray-male.webp"
     }
   ],
   "valorant": [
@@ -34,13 +34,13 @@
       "name": "Emma Williams",
       "discordId": "@emmaw#7890",
       "role": "Lead Game Administrator",
-      "avatar": "/images/team/emma-avatar.png"
+      "avatar": "/images/staff/game-leads/default-avatar-gray-male.webp"
     },
     {
       "name": "David Kim",
       "discordId": "@davidk#2345",
       "role": "Assistant Administrator",
-      "avatar": "/images/team/david-avatar.png"
+      "avatar": "/images/staff/game-leads/default-avatar-gray-male.webp"
     }
   ],
   "league-of-legends": [
@@ -48,7 +48,7 @@
       "name": "Jessica Brown",
       "discordId": "@jessicab#6789",
       "role": "Lead Game Administrator",
-      "avatar": "/images/team/jessica-avatar.png"
+      "avatar": "/images/staff/game-leads/default-avatar-gray-male.webp"
     }
   ],
   "counter-strike": [
@@ -56,7 +56,7 @@
       "name": "Tom Wilson",
       "discordId": "@tomw#1357",
       "role": "Lead Game Administrator",
-      "avatar": "/images/team/tom-avatar.png"
+      "avatar": "/images/staff/game-leads/default-avatar-gray-male.webp"
     }
   ]
 }
