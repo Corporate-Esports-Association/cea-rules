@@ -83,7 +83,8 @@ export const GameLeads = ({ game, className = '' }) => {
                                             backgroundColor: 'var(--nextra-bg-secondary)',
                                             borderRadius: '0.25rem'
                                         }}>
-                                            {lead.discordId.replace('@', '').replace('#', '')}
+                                            {/* {lead.discordId.replace('@', '').replace('#', '')} */}
+                                            {lead.discordName || lead.discordId.replace('@', '').replace('#', '')}
                                         </code>
                                     </div>
 
