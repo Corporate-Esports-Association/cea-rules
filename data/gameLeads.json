@@ -10,7 +10,7 @@
       "name": "Sarah Johnson",
       "discordId": "@sarahj#5678",
       "role": "Assistant Administrator",
-      "avatar": "/images/staff/game-leads/default-avatar-gray-male.webp"
+      "avatar": "/images/staff/game-leads/default-avatar-gray-female.webp"
     }
   ],
   "fortnite": [
@@ -34,7 +34,7 @@
       "name": "Emma Williams",
       "discordId": "@emmaw#7890",
       "role": "Lead Game Administrator",
-      "avatar": "/images/staff/game-leads/default-avatar-gray-male.webp"
+      "avatar": "/images/staff/game-leads/default-avatar-gray-female.webp"
     },
     {
       "name": "David Kim",
@@ -48,7 +48,7 @@
       "name": "Jessica Brown",
       "discordId": "@jessicab#6789",
       "role": "Lead Game Administrator",
-      "avatar": "/images/staff/game-leads/default-avatar-gray-male.webp"
+      "avatar": "/images/staff/game-leads/default-avatar-gray-female.webp"
     }
   ],
   "counter-strike": [
