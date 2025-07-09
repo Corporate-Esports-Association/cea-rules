@@ -4,13 +4,13 @@
       "name": "John Smith",
       "discordId": "@johnsmith#1234",
       "role": "Lead Game Administrator",
-      "avatar": "/images/team/john-avatar.png"
+      "avatar": ""
     },
     {
       "name": "Sarah Johnson",
       "discordId": "@sarahj#5678",
       "role": "Assistant Administrator",
-      "avatar": "/images/team/sarah-avatar.png"
+      "avatar": ""
     }
   ],
   "fortnite": [
@@ -24,7 +24,7 @@
   "ea-fc": [
     {
       "name": "Alex Rodriguez",
-      "discordId": "@alexr#3456",
+      "discordId": "@gitago",
       "role": "Lead Game Administrator",
       "avatar": "/images/team/alex-avatar.png"
     }
