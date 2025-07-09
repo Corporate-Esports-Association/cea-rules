@@ -4,13 +4,13 @@
       "name": "John Smith",
       "discordId": "@johnsmith#1234",
       "role": "Lead Game Administrator",
-      "avatar": "/images/staff/game-leads/default-avatar-gray-male.webp"
+      "avatar": "/images/staff/game-leads/default-avatar-gray-male.jpg"
     },
     {
       "name": "Sarah Johnson",
       "discordId": "@sarahj#5678",
       "role": "Assistant Administrator",
-      "avatar": "/images/staff/game-leads/default-avatar-gray-female.webp"
+      "avatar": "/images/staff/game-leads/default-avatar-gray-female.jpg"
     }
   ],
   "fortnite": [
@@ -18,7 +18,7 @@
       "name": "Mike Chen",
       "discordId": "@mikechen#9012",
       "role": "Lead Game Administrator",
-      "avatar": "/images/staff/game-leads/default-avatar-gray-male.webp"
+      "avatar": "/images/staff/game-leads/default-avatar-gray-male.jpg"
     }
   ],
   "ea-fc": [
@@ -26,7 +26,7 @@
       "name": "Alex Rodriguez",
       "discordId": "@gitago",
       "role": "Lead Game Administrator",
-      "avatar": "/images/staff/game-leads/default-avatar-gray-male.webp"
+      "avatar": "/images/staff/game-leads/default-avatar-gray-male.jpg"
     }
   ],
   "valorant": [
@@ -34,13 +34,13 @@
       "name": "Emma Williams",
       "discordId": "@emmaw#7890",
       "role": "Lead Game Administrator",
-      "avatar": "/images/staff/game-leads/default-avatar-gray-female.webp"
+      "avatar": "/images/staff/game-leads/default-avatar-gray-female.jpg"
     },
     {
       "name": "David Kim",
       "discordId": "@davidk#2345",
       "role": "Assistant Administrator",
-      "avatar": "/images/staff/game-leads/default-avatar-gray-male.webp"
+      "avatar": "/images/staff/game-leads/default-avatar-gray-male.jpg"
     }
   ],
   "league-of-legends": [
@@ -48,7 +48,7 @@
       "name": "Jessica Brown",
       "discordId": "@jessicab#6789",
       "role": "Lead Game Administrator",
-      "avatar": "/images/staff/game-leads/default-avatar-gray-female.webp"
+      "avatar": "/images/staff/game-leads/default-avatar-gray-female.jpg"
     }
   ],
   "counter-strike": [
@@ -56,7 +56,7 @@
       "name": "Tom Wilson",
       "discordId": "@tomw#1357",
       "role": "Lead Game Administrator",
-      "avatar": "/images/staff/game-leads/default-avatar-gray-male.webp"
+      "avatar": "/images/staff/game-leads/default-avatar-gray-male.jpg"
     }
   ]
 }
