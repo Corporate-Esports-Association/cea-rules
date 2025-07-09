@@ -16,10 +16,23 @@ export const GameLeads = ({ game, className = '' }) => {
     // const pathname = usePathname()
     // const pathSegments = pathname.split('/').filter(Boolean) // Remove empty segments
     // const game = pathSegments.length > 1 ? pathSegments[0] : pathSegments[pathSegments.length - 1]
+  
+    let leadsToDisplay = []
+    let groupedByGame = false
+    
+    if (game === 'all') {
+        // Group leads by game
+        leadsToDisplay = Object.entries(gameLeadsData).map(([gameName, gameLeads]) => ({
+            gameName,
+            leads: gameLeads
+        }))
+        groupedByGame = true
+    } else {
+        leadsToDisplay = gameLeadsData[game] || []
+    }
 
-    const leads = gameLeadsData[game]
-
-    if (!leads || leads.length === 0) {
+    if ((!groupedByGame && (!leadsToDisplay || leadsToDisplay.length === 0)) || 
+        (groupedByGame && leadsToDisplay.length === 0)) {
         console.warn(`No game leads found for game: ${game}`)
         return (
             <div className={className}>
@@ -29,9 +42,7 @@ export const GameLeads = ({ game, className = '' }) => {
     }
 
     return (
-        <div className={className}
-        // style={{color:'white', backgroundColor:'gray', padding: '1rem', borderRadius: '0.5rem', border: '1px solid var(--nextra-border-color)'}}
-        >
+        <div className={className}>
             <div style={{ marginBottom: '0.5rem', marginTop: '1rem' }}>
                 <h4 style={{
                     display: 'flex',
@@ -46,86 +57,159 @@ export const GameLeads = ({ game, className = '' }) => {
                 </h4>
             </div>
 
-            <Cards>
-                {leads.map((lead, index) => (
-
-
-
-                    <Cards.Card
-                        key={index}
-                        // icon={lead.role.toLowerCase().includes('lead') ? <Crown size={20} /> : <User size={20} />}
-                        title={
-                            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
-                                <span style={{ fontWeight: '600' }}>
-                                    {/* {lead.role.toLowerCase().includes('lead') ? <Crown size={20} /> : <User size={20} />} */}
-                                    {lead.name}
-                                </span>
-                                <span style={{
-                                    fontSize: '0.8rem',
-                                    color: 'var(--nextra-fg-secondary)',
-                                    fontWeight: '400'
-                                }}>
-                                    {lead.role}
-
-                                    {/* <p>
-                                        <span style={{
-                                            fontSize: '0.8rem',
-                                            color: 'var(--nextra-fg-secondary)',
-                                            fontWeight: '400'
-                                        }}>
-                                            {lead.discordId}
-                                        </span>
-                                    </p> */}
-                                </span>
-
-
-                                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                                        <MessageCircle size={16} />
-                                        <code style={{
-                                            fontSize: '0.85rem',
-                                            // padding: '0.125rem 0.25rem',
-                                            backgroundColor: 'var(--nextra-bg-secondary)',
-                                            borderRadius: '0.25rem'
-                                        }}>
-                                            {/* {lead.discordId.replace('@', '').replace('#', '')} */}
-                                            {lead.discordName || lead.discordId.replace('@', '').replace('#', '')}
-                                        </code>
-                                    </div>
-
-                                </div>
-                            </div>
-                        }
-                        href={`https://discord.com/users/${lead.discordId.replace('@', '').replace('#', '')}`}
-                    >
-
-                        <div style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            marginBottom: '0.0rem',
-                            flexWrap: 'nowrap',
-                            overflow: 'hidden',
+            {groupedByGame ? (
+                // Display grouped by game
+                leadsToDisplay.map(({ gameName, leads }) => (
+                    <div key={gameName} style={{ marginBottom: '2rem' }}>
+                        <h3 style={{ 
+                            textTransform: 'capitalize', 
+                            marginBottom: '1rem',
+                            fontSize: '1.1rem',
+                            fontWeight: '600'
                         }}>
-                            <Image
-                                src={lead.avatar || 'https://placecats.com/300/200'}
-                                alt={`${lead.name}'s avatar`}
-                                width={125}
-                                height={125}
-                                style={{
-                                    borderRadius: '50%',
-                                    marginRight: '0.5rem',
-                                    marginTop: '1rem',
-                                    flexShrink: 0
-                                }}
-                            />
-                        </div>
-        
-                    </Cards.Card>
-                ))}
-            </Cards>
+                            {gameName.replace(/-/g, ' ')}
+                        </h3>
+                        <Cards>
+                            {leads.map((lead, index) => (
+                                <Cards.Card
+                                    key={`${gameName}-${index}`}
+                                    title={
+                                        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
+                                            <span style={{ fontWeight: '600' }}>
+                                                {lead.name}
+                                            </span>
+                                            <span style={{
+                                                fontSize: '0.8rem',
+                                                color: 'var(--nextra-fg-secondary)',
+                                                fontWeight: '400'
+                                            }}>
+                                                {lead.role}
+                                            </span>
+                                            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                                                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                                                    <MessageCircle size={16} />
+                                                    <code style={{
+                                                        fontSize: '0.85rem',
+                                                        backgroundColor: 'var(--nextra-bg-secondary)',
+                                                        borderRadius: '0.25rem'
+                                                    }}>
+                                                        {lead.discordName || lead.discordId.replace('@', '').replace('#', '')}
+                                                    </code>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                    href={`https://discord.com/users/${lead.discordId.replace('@', '').replace('#', '')}`}
+                                >
+                                    <div style={{
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        marginBottom: '0.0rem',
+                                        flexWrap: 'nowrap',
+                                        overflow: 'hidden',
+                                    }}>
+                                        <Image
+                                            src={lead.avatar || 'https://placecats.com/300/200'}
+                                            alt={`${lead.name}'s avatar`}
+                                            width={125}
+                                            height={125}
+                                            style={{
+                                                borderRadius: '50%',
+                                                marginRight: '0.5rem',
+                                                marginTop: '1rem',
+                                                flexShrink: 0
+                                            }}
+                                        />
+                                    </div>
+                                </Cards.Card>
+                            ))}
+                        </Cards>
+                    </div>
+                ))
+            ) : (
+                // Display single game leads
+                <Cards>
+                    {leadsToDisplay.map((lead, index) => (
 
-            <div style={{
+
+
+                        <Cards.Card
+                            key={index}
+                            // icon={lead.role.toLowerCase().includes('lead') ? <Crown size={20} /> : <User size={20} />}
+                            title={
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
+                                    <span style={{ fontWeight: '600' }}>
+                                        {/* {lead.role.toLowerCase().includes('lead') ? <Crown size={20} /> : <User size={20} />} */}
+                                        {lead.name}
+                                    </span>
+                                    <span style={{
+                                        fontSize: '0.8rem',
+                                        color: 'var(--nextra-fg-secondary)',
+                                        fontWeight: '400'
+                                    }}>
+                                        {lead.role}
+
+                                        {/* <p>
+                                            <span style={{
+                                                fontSize: '0.8rem',
+                                                color: 'var(--nextra-fg-secondary)',
+                                                fontWeight: '400'
+                                            }}>
+                                                {lead.discordId}
+                                            </span>
+                                        </p> */}
+                                    </span>
+
+
+                                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                                            <MessageCircle size={16} />
+                                            <code style={{
+                                                fontSize: '0.85rem',
+                                                // padding: '0.125rem 0.25rem',
+                                                backgroundColor: 'var(--nextra-bg-secondary)',
+                                                borderRadius: '0.25rem'
+                                            }}>
+                                                {/* {lead.discordId.replace('@', '').replace('#', '')} */}
+                                                {lead.discordName || lead.discordId.replace('@', '').replace('#', '')}
+                                            </code>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            }
+                            href={`https://discord.com/users/${lead.discordId.replace('@', '').replace('#', '')}`}
+                        >
+
+                            <div style={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                marginBottom: '0.0rem',
+                                flexWrap: 'nowrap',
+                                overflow: 'hidden',
+                            }}>
+                                <Image
+                                    src={lead.avatar || 'https://placecats.com/300/200'}
+                                    alt={`${lead.name}'s avatar`}
+                                    width={125}
+                                    height={125}
+                                    style={{
+                                        borderRadius: '50%',
+                                        marginRight: '0.5rem',
+                                        marginTop: '1rem',
+                                        flexShrink: 0
+                                    }}
+                                />
+                            </div>
+        
+                        </Cards.Card>
+                    ))}
+                </Cards>
+            )}
+
+            {/* <div style={{
                 padding: '1rem',
                 backgroundColor: 'var(--nextra-bg-secondary)',
                 borderRadius: '0.5rem',
@@ -146,8 +230,8 @@ export const GameLeads = ({ game, className = '' }) => {
                     <li>Use Discord for immediate assistance during matches</li>
                     <li>Check the rulebook first for general questions</li>
                 </ul>
-            </div>
-            <hr />
+            </div> */}
+            {/* <hr /> */}
         </div>
     )
 }
