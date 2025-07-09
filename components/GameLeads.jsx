@@ -6,6 +6,11 @@ import { MessageCircle, User, Crown } from 'lucide-react'
 import gameLeadsData from '../data/gameLeads.json'
 import Image from 'next/image'
 
+
+// Instead of pulling gameleads from a .json file here, we could use the google sheet that holds this info
+// and either pull from that OR have our website cache that and we can make API calls to the cea.gg website instead?
+// otherwise we can just export the google sheet when needed as .json and use it here as well
+
 export const GameLeads = ({ game, className = '' }) => {
     // Extract game from URL path (e.g., /fortnite/rules -> fortnite, /valorant -> valorant)
     // const pathname = usePathname()
