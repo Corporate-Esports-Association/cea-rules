@@ -1,0 +1,62 @@
+{
+  "rocket-league": [
+    {
+      "name": "John Smith",
+      "discordId": "@johnsmith#1234",
+      "role": "Lead Game Administrator",
+      "avatar": "/images/team/john-avatar.png"
+    },
+    {
+      "name": "Sarah Johnson",
+      "discordId": "@sarahj#5678",
+      "role": "Assistant Administrator",
+      "avatar": "/images/team/sarah-avatar.png"
+    }
+  ],
+  "fortnite": [
+    {
+      "name": "Mike Chen",
+      "discordId": "@mikechen#9012",
+      "role": "Lead Game Administrator",
+      "avatar": "/images/team/mike-avatar.png"
+    }
+  ],
+  "ea-fc": [
+    {
+      "name": "Alex Rodriguez",
+      "discordId": "@alexr#3456",
+      "role": "Lead Game Administrator",
+      "avatar": "/images/team/alex-avatar.png"
+    }
+  ],
+  "valorant": [
+    {
+      "name": "Emma Williams",
+      "discordId": "@emmaw#7890",
+      "role": "Lead Game Administrator",
+      "avatar": "/images/team/emma-avatar.png"
+    },
+    {
+      "name": "David Kim",
+      "discordId": "@davidk#2345",
+      "role": "Assistant Administrator",
+      "avatar": "/images/team/david-avatar.png"
+    }
+  ],
+  "league-of-legends": [
+    {
+      "name": "Jessica Brown",
+      "discordId": "@jessicab#6789",
+      "role": "Lead Game Administrator",
+      "avatar": "/images/team/jessica-avatar.png"
+    }
+  ],
+  "counter-strike": [
+    {
+      "name": "Tom Wilson",
+      "discordId": "@tomw#1357",
+      "role": "Lead Game Administrator",
+      "avatar": "/images/team/tom-avatar.png"
+    }
+  ]
+}
