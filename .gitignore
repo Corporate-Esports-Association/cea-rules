@@ -130,3 +130,4 @@ dist
 .pnp.*
 /public/_pagefind
 next-env.d.ts
+package-lock.json
