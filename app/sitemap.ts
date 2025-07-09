@@ -1,13 +1,14 @@
 import { getPageMap } from 'nextra/page-map';
+import { MetadataRoute } from 'next';
 
 export const dynamic = "force-static";
 export const revalidate = false;
 
 const BASE_URL = "https://docs.esportsdash.com";
 
-export default async function sitemap() {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const pageMap = await getPageMap();
-  const routes = [];
+  const routes: MetadataRoute.Sitemap = [];
   
   routes.push({
     url: `${BASE_URL}/`,
@@ -17,7 +18,7 @@ export default async function sitemap() {
   });
 
   // Function to extract routes
-  function extractRoutes(items) {
+  function extractRoutes(items: any) {
     if (!items || !Array.isArray(items)) return;
 
     for (const item of items) {
