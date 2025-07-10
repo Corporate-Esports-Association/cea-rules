@@ -20,7 +20,7 @@ export const metadata = {
   title: 'Rulebooks | Corporate Esports Association',
   // description: 'Guides and Documentation for Corporate Esports Association - the professional scoreboard and streaming toolkit for esports broadcasters, tournament organizers, and content creators.',
   description: 'CEA Rulebooks - Official rulebooks for the Corporate Esports Association, providing comprehensive guidelines for esports tournaments and competitions.',
-  metadataBase: 'https://rules.cea.gg',
+  metadataBase: new URL('https://rules.cea.gg'),
   openGraph: {
     images: [
       {
