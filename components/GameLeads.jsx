@@ -3,7 +3,7 @@ import React from 'react'
 // import { usePathname } from 'next/navigation'
 import { Cards } from 'nextra/components'
 import { MessageCircle, User, Crown } from 'lucide-react'
-import gameLeadsData from '../data/gameLeads.json'
+import gameLeadsData from '../app/data/gameLeads.json' 
 import Image from 'next/image'
 
 
