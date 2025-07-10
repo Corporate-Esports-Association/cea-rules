@@ -5,7 +5,7 @@ import 'nextra-theme-docs/style.css'
 import Link from "next/link";
 import { socialLinks } from './data/socialLinks'
 
-import { GoogleAnalytics } from '@next/third-parties/google'
+// import { GoogleAnalytics } from '@next/third-parties/google'
 
 
 import { Search } from 'nextra/components/search'
@@ -18,7 +18,6 @@ import './globals.css'
 // Setting overall metadata for the website
 export const metadata = {
   title: 'Rulebooks | Corporate Esports Association',
-  // description: 'Guides and Documentation for Corporate Esports Association - the professional scoreboard and streaming toolkit for esports broadcasters, tournament organizers, and content creators.',
   description: 'CEA Rulebooks - Official rulebooks for the Corporate Esports Association, providing comprehensive guidelines for esports tournaments and competitions.',
   metadataBase: new URL('https://rules.cea.gg'),
   openGraph: {

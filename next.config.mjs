@@ -10,6 +10,6 @@ export default withNextra({
      cleanDistDir: true,
     images: {
         unoptimized: true,
-        domains: ['img.youtube.com'],
+        domains: ['img.youtube.com', 'cea.gg'],
       },
 });
