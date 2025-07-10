@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/GitProductions/EsportsDash-Docs"
+    "url": "https://github.com/Corporate-Esports-Association/cea-rules"
   },
-  "author": "EsportsDash",
+  "author": "Corportate Esports Association",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/GitProductions/EsportsDashBoard/issues"
+    "url": "https://github.com/Corporate-Esports-Association/cea-rules/issues"
   },
-  "homepage": "https://esportsdash.com",
+  "homepage": "https://rules.cea.gg",
   "dependencies": {
     "@next/third-parties": "^15.3.3",
     "lucide": "^0.479.0",

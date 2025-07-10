@@ -17,9 +17,10 @@ import './globals.css'
 
 // Setting overall metadata for the website
 export const metadata = {
-  title: 'Documentation | EsportsDash',
-  description: 'Guides and Documentation for EsportsDash - the professional scoreboard and streaming toolkit for esports broadcasters, tournament organizers, and content creators.',
-  metadataBase: 'https://docs.esportsdash.com',
+  title: 'Rulebooks | Corporate Esports Association',
+  // description: 'Guides and Documentation for Corporate Esports Association - the professional scoreboard and streaming toolkit for esports broadcasters, tournament organizers, and content creators.',
+  description: 'CEA Rulebooks - Official rulebooks for the Corporate Esports Association, providing comprehensive guidelines for esports tournaments and competitions.',
+  metadataBase: 'https://rules.cea.gg',
   openGraph: {
     images: [
       {
@@ -39,7 +40,7 @@ export const metadata = {
 
 
 
-const banner = <Banner storageKey="esportsdash-docs-construction-notice-1">
+const banner = <Banner storageKey="cea-rules-construction-notice-1">
   🚧 Documentation is currently under construction. Check back for updates! 🚧
 </Banner>
 
@@ -110,24 +111,8 @@ const footer = (
         ))}
       </div>
 
-      {/* Divider */}
-      <hr style={{
-        width: '100%',
-        border: 'none',
-        borderTop: '1px solid gray',
-        margin: '0.5rem 0'
-      }} />
 
-      {/* Copyright */}
-      <div style={{
-        textAlign: 'center',
-        fontSize: '0.875rem',
-        // color: 'var(--nextra-text-secondary-color)'
-      }}>
-        © {new Date().getFullYear()} GitProductions. All rights reserved.<br />
-        <strong>CEA Rulebooks™</strong> is proprietary software developed by GitProductions.<br />
-        Unauthorized reproduction, distribution, or modification is strictly prohibited.
-      </div>
+
     </div>
   </Footer>
 )
@@ -162,7 +147,7 @@ export default async function RootLayout({ children }) {
 
 
         <link rel="shortcut icon" href="/images/general/icon.svg" />
-        {/* Your additional tags should be passed as `children` of `<Head>` element */}
+        {/* Additional tags should be passed as `children` of `<Head>` element */}
       </Head>
 
       <body>
@@ -173,7 +158,7 @@ export default async function RootLayout({ children }) {
           banner={banner}
           navbar={navbar}
           pageMap={await getPageMap()}
-          docsRepositoryBase="https://github.com/GitProductions/EsportsDash-Docs/tree/main"
+          docsRepositoryBase="https://github.com/Corporate-Esports-Association/cea-rules/tree/main"
           footer={footer}
 
           nextThemes={{

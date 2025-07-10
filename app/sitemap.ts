@@ -4,7 +4,7 @@ import { MetadataRoute } from 'next';
 export const dynamic = "force-static";
 export const revalidate = false;
 
-const BASE_URL = "https://docs.esportsdash.com";
+const BASE_URL = "https://rules.cea.gg";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const pageMap = await getPageMap();

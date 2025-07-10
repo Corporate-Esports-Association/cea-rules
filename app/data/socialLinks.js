@@ -1,25 +1,30 @@
-import { GithubIcon, TwitterIcon, YoutubeIcon } from 'lucide-react'
+import { GithubIcon, TwitterIcon, YoutubeIcon, LinkedinIcon, TwitchIcon } from 'lucide-react'
 import { DiscordIcon } from '../../components/icons/DiscordIcon'
 
 export const socialLinks = {
-  github: {
-    name: 'GitHub',
-    href: 'https://github.com/GitProductions/EsportsDash-Docs',
-    icon: <GithubIcon size={24} />
+  linkedin: {
+    name: 'LinkedIn',
+    href: 'https://www.linkedin.com/company/corporateesportsassociation',
+    icon: <LinkedinIcon size={24} />
   },
   twitter: {
     name: 'Twitter',
-    href: 'https://twitter.com/intent/user?screen_name=esportsdash_',
+    href: 'https://twitter.com/intent/user?screen_name=CorporateEsport',
     icon: <TwitterIcon size={24} />
   },
   youtube: {
     name: 'YouTube',
-    href: 'https://youtube.com/@Esports-Dash',
+    href: 'https://www.youtube.com/c/CorporateEsportsAssociation',
     icon: <YoutubeIcon size={24} />
+  },
+  twitch: {
+    name: 'Twitch',
+    href: 'https://www.twitch.tv/corpesports',
+    icon: <TwitchIcon size={24} />
   },
   discord: {
     name: 'Discord',
-    href: 'https://esportsdash.com/discord',
+    href: 'https://cea.gg/discord',
     icon: <DiscordIcon size={24} />
   }
 }
